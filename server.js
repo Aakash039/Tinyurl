@@ -9,9 +9,6 @@ const linksRouter = require('./routes/links.js');
 
 const app = express();
 
-// ✅ Serve everything inside /public as static files
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -84,3 +81,4 @@ mongoose
     console.error('MongoDB connection error:', err);
     process.exit(1);
   });
+
