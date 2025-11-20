@@ -4,16 +4,6 @@ const router = express.Router();
 const Link = require('../models/Link');
 const validUrl = require('valid-url');
 
-// helper to validate URL
-// function isValidUrl(url) {
-//   try {
-//     new URL(url);
-//     return true;
-//   } catch {
-//     return false;
-//   }
-// }
-
 // helper to generate random code (6–8 chars)
 function generateRandomCode() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -116,3 +106,4 @@ router.delete('/:code', async (req, res) => {
 });
 
 module.exports = router;
+
